@@ -3,6 +3,7 @@ package com.yakushevso.vacation_calc_neoflex.service;
 import com.fasterxml.jackson.databind.JsonNode;
 import com.fasterxml.jackson.databind.ObjectMapper;
 import com.yakushevso.vacation_calc_neoflex.exception.CalendarFetchException;
+import lombok.RequiredArgsConstructor;
 import lombok.extern.slf4j.Slf4j;
 import org.springframework.stereotype.Service;
 import org.springframework.web.client.RestTemplate;
@@ -12,10 +13,11 @@ import java.util.LinkedHashSet;
 import java.util.Set;
 
 @Service
+@RequiredArgsConstructor
 @Slf4j
 public class CalendarFetchService {
-    private final RestTemplate restTemplate = new RestTemplate();
-    private final ObjectMapper objectMapper = new ObjectMapper();
+    private final RestTemplate restTemplate;
+    private final ObjectMapper objectMapper;
 
     public Set<LocalDate> fetchHolidaysAndWeekends(int year) {
         Set<LocalDate> holidaysAndWeekends = new LinkedHashSet<>();

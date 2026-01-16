@@ -1,10 +1,10 @@
 package com.yakushevso.vacation_calc_neoflex.dto;
 
-import lombok.AllArgsConstructor;
 import lombok.Getter;
+import lombok.RequiredArgsConstructor;
 
 @Getter
-@AllArgsConstructor
+@RequiredArgsConstructor
 public class VacationResponse {
     private final double amount;
 }

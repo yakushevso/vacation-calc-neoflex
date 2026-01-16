@@ -59,6 +59,3 @@ public class VacationController {
         return new VacationResponse(result);
     }
 }
-
-// curl -s "localhost:8080/calculate?salary=60000&days=14" | jq
-// curl -s "localhost:8080/calculate?salary=60000&startDate=2026-01-01&endDate=2026-01-15" | jq
